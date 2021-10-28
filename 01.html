@@ -1,0 +1,97 @@
+<!-- font-size에 관한 연습  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		html {
+
+			/* font-size: 16px; 기본 값 */
+			/* font-size: 100px; */
+		}
+
+		h1 {
+			/* 처음 배운 폰트 사이즈 em, rem */
+			/* h1 태그에 1em 을 줄시 브라우저 폰트 사이즈의 기본이 16px 이므로 16px을 100%로 본다 */
+			font-family: Roboto, sans-serif;
+			color: crimson;
+			/* font-size: 80px; */
+			font-size: 5em;
+			/*80/16*/
+			/* font-size: 80px */
+		}
+
+		h1 small {
+			/* 다음 줄로 넘기기 위해 br 태그를 써도 되지만 small 태그를 블록으로 만들어 줘도 된다. */
+			display: block;
+			/* font-size: 24px; */
+			font-size: 0.3em;
+			/* 부모 요소에서 상속 되므로 24/80을 해야 정확히 표현 된다. */
+		}
+
+		/* rem = root em */
+		h2 {
+			color: dodgerblue;
+			font-family: Roboto, sans-serif;
+			font-size: 5rem;
+		}
+
+		h2 small {
+			/* 다음 줄로 넘기기 위해 br 태그를 써도 되지만 small 태그를 블록으로 만들어 줘도 된다. */
+			display: block;
+			/* font-size: 24px; */
+			font-size: 1.5rem;
+			/* 24/16 */
+			/* 부모 요소에서 상속 되므로 24/80을 해야 정확히 표현 된다. */
+		}
+
+		.btn {
+			/* padding: 10px; */
+			/* 10/32 부모 요소 font-size가 32px 이니 패딩을 줄때 10px로 주고 싶으면 10/32 */
+			padding: 0.3125em;
+			/* 2*16 = 32px */
+			font-size: 2rem;
+		}
+
+		.btn-style {
+			/* 16px */
+			font-size: 1rem;
+		}
+
+		.btn-style2 {
+			font-size: 5rem;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>
+		<!-- 저작권 정보라던지 덧 붙이는 곳에 스몰 태그를 사용한다 -->
+		<small>Hello, Raphael!</small>
+		I'm Raphael!
+	</h1>
+
+	<h2>
+		<!-- 저작권 정보라던지 덧 붙이는 곳에 스몰 태그를 사용한다 -->
+		<small>Hello, Raphael!</small>
+		I'm Raphael!
+	</h2>
+
+	<button class="btn">
+		join
+	</button>
+	<button class="btn btn-style">
+		join2
+	</button>
+	<button class="btn btn-style2">
+		join3
+	</button>
+</body>
+
+</html>
